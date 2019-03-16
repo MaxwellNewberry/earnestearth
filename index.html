@@ -59,7 +59,25 @@
         color: #636363;
       }
 
+      .preloader {
+         /* Position */
+         position: absolute;
+         top: 0;
+         left: 0;
+         height: 100%;
+         width: 100%;
+         z-index: 9999;
+
+         /* Style */
+         background-image: url('preloader.svg');
+         background-size: 15%;
+         background-repeat: no-repeat;
+         background-color: #FFF;
+         background-position: center;
+      }
+
       .wrapper {
+        display: none;
         height: 100%;
       }
 
@@ -315,6 +333,11 @@
 
     @media only screen and (max-width: 768px) {
 
+      .preloader {
+        /* Style */
+        background-size: 15%;
+      }
+
       .mobile_symbol {
         /* Position */
         display: block;
@@ -365,7 +388,7 @@
   <body  id="skrollr-body">
 
     <!-- Pre-loader -->
-    <div class="pre-loader"></div>
+    <div class="preloader" id="pre-loader"></div>
 
     <div class="wrapper">
 
@@ -507,8 +530,8 @@
   });
 
   $(document).ready(function() {
-    $('.preloader').fadeOut('slow');
-   $('#wrapper').fadeIn();
+    $('.preloader').fadeOut(1500);
+   $('.wrapper').fadeIn();
    $("#mobile_symbol").click(function() {
      if($("#mobile_menu_list").is(":visible"))
      {
