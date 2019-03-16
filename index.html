@@ -515,6 +515,8 @@
           }});
   </script>
   <script>
+  var animation_done = false;
+  var animation_done_s1 = false;
   $.fn.inView = function(){
       //Window Object
       var win = $(window);
@@ -541,9 +543,11 @@
       }
   });
 
-  $(document).ready(function() {
+$(window).bind("load", function() {
+    $('body').css('overflow','hidden');
     $('.preloader').fadeOut();
    $('.wrapper').fadeIn();
+   $('body').css('overflow','auto');
    $("#mobile_symbol").click(function() {
      if($("#mobile_menu_list").is(":visible"))
      {
