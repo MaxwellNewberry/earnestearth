@@ -10,7 +10,25 @@
     <link rel="stylesheet" href="css/skeleton.css">
     <style type="text/css">
       /* import */
-      @import url('https://fonts.googleapis.com/css?family=Lora:700|Hind:600|Hind:300');
+      @import url('https://fonts.googleapis.com/css?family=Hind:600|Hind:300|Montserrat');
+      @font-face {
+          font-family: 'Libby';
+          src: url('fonts/LibbyRegular.ttf') format('truetype');
+          font-weight: normal;
+          font-style: normal;
+      }
+      @font-face {
+          font-family: 'Libby-Bold';
+          src: url('fonts/LibbyBold.ttf') format('truetype');
+          font-weight: bold;
+          font-style: normal;
+      }
+      @font-face {
+          font-family: 'Libby-Heavy';
+          src: url('fonts/LibbyHeavy.ttf') format('truetype');
+          font-weight: bolder;
+          font-style: normal;
+      }
 
       /* Fadein */
       @keyframes fadein {
@@ -104,7 +122,7 @@
         position: fixed;
         width: 100%;
         overflow: hidden;
-        z-index: 102;
+        z-index: 100;
 
         background-color: #FFFFFF;
       }
@@ -113,10 +131,9 @@
         width: 100%;
         float: left;
         font-size: 2em;
-        padding: 10px 0 5px 0;
+        padding: 15px 0 5px 30px;
         font-weight: bolder;
         color: #636363;
-        font-family: 'Lora', serif;
       }
 
       .brand_image_section {
@@ -124,17 +141,13 @@
       }
 
       .brand_image_section img {
-        width: 60px;
-      }
-
-      .brand_text_section {
-        margin: 2px;
+        height: 60px;
       }
 
       ul.nav-list {
         float: right;
         font-size: 20px;
-        margin: 20px 50px 20px 20px;
+        margin: 30px 50px 20px 20px;
         font-weight: bold;
       }
 
@@ -178,7 +191,7 @@
         padding-top: 75px;
         height: 400px;
         width: 100%;
-        background: linear-gradient(rgba(180, 91, 80, 0.6), rgba(180, 91, 80, 0.6));
+        background: linear-gradient(rgba(103, 152, 0, 0.6), rgba(178, 91, 84, 0.6));
         background-size: cover;
         position: relative;
         overflow: hidden;
@@ -196,9 +209,10 @@
           z-index: -1;
       }
 
-      #hero div.hero_text_section, #spacer div.spacer_text_section {
+      #hero div.hero_text_section, .spacer div.spacer_text_section {
         color: #FFFFFF;
-        font-size: 55px;
+        font-size: 30px;
+        font-family: 'Libby-Bold', sans-serif;
         top: 55%;
         left: 50%;
         margin-right: -50%;
@@ -208,6 +222,7 @@
         font-weight: bold;
         margin: 0 auto;
         z-index: 1;
+        text-align: center;
       }
 
       #about {
@@ -226,10 +241,16 @@
         font-size: 18px;
       }
 
-      #spacer {
-        background: linear-gradient(rgba(180, 91, 80, 0.6), rgba(180, 91, 80, 0.6)), url('spacer_bg.jpg') center center no-repeat;
-        background-size: cover;
+      .spacer {
         height: 350px;
+      }
+
+      .spacer.one {
+        background: linear-gradient(rgba(178, 91, 84, 0.6), rgba(178, 91, 84, 0.6)), url('spacer_bg.jpg') center center / cover no-repeat;
+      }
+
+      .spacer.two {
+        background: linear-gradient(rgba(178, 91, 84, 0.6), rgba(178, 91, 84, 0.6)), url('spacer_bg2.jpg') center center / cover no-repeat;
       }
 
       .about_div {
@@ -255,7 +276,6 @@
       .mobile-menu {
         /* Position */
         position: fixed;
-        height: 100%;
         width: 100%;
         cursor:pointer;
         z-index: 101;
@@ -271,7 +291,7 @@
         /* Position */
         position: relative;
         display: none;
-        height: 100%;
+        height: 100vh;
         width: 100%;
         margin: 0;
         padding: 20px;
@@ -306,7 +326,7 @@
         /* Position */
         position: absolute;
         display: none;
-        padding: 10px 30px;
+        padding: 15px 30px;
         right: 0;
         z-index: 1001;
       }
@@ -332,10 +352,39 @@
     height: 100%;
     }
 
+    #footer {
+      background-color: #FFEDD8;
+      color: #B25B53;
+    }
+
+    #footer .info {
+      font-family: 'Hind', sans-serif;
+      text-align: left;
+    }
+
+    #footer .info h1 {
+      font-weight: bold;
+      font-size: 35px;
+    }
+
+    #footer .logo {
+      height: 200px;
+    }
+
+    .logo .logo_footer {
+      height: 100%;
+      background: url('footer_logo.png') center center / 50% no-repeat;
+    }
+
+    #footer .footer_address p {
+      display: block;
+      margin: 0;
+    }
+
 
     @media only screen and (max-width: 1000px) {
       #hero div.hero_text_section, #spacer div.spacer_text_section {
-        font-size: 40px;
+        font-size: 25px;
       }
     }
 
@@ -346,10 +395,6 @@
         background-size: 25%;
       }
 
-      .mobile-menu {
-        z-index: 103;
-      }
-
       .mobile_symbol {
         /* Position */
         display: block;
@@ -357,7 +402,7 @@
 
       .brand {
         font-size: 1.5em;
-        padding: 5px 0 5px 0;
+        padding: 10px 0 5px 20px;
       }
 
       .brand_text_section {
@@ -365,7 +410,7 @@
       }
 
       .brand_image_section img {
-        width: 40px;
+        height: 40px;
       }
 
       .nav-list {
@@ -373,7 +418,7 @@
       }
 
       #hero div.hero_text_section, #spacer div.spacer_text_section {
-        font-size: 30px;
+        font-size: 20px;
         padding: 10px;
         width: 100%;
       }
@@ -389,6 +434,10 @@
 
       .about_div .four.columns, .five.columns {
         width: 100% !important;
+      }
+
+      .logo .logo_footer {
+        background-position: center bottom;
       }
 
     }
@@ -408,7 +457,7 @@
       <div id="nav">
         <div class="row">
           <div class="five columns">
-            <div class="brand"><div class="brand_image_section"><img src="logo.jpg" /></div> <div class="brand_text_section">earnest-earth</div></div>
+            <div class="brand"><div class="brand_image_section"><img src="logo.jpg" /></div></div>
           </div>
           <div class="seven columns">
             <ul class="nav-list">
@@ -440,9 +489,9 @@
       <!-- Section 1: Hero -->
       <section id="hero">
         <video playsinline autoplay muted loop>
-  			<source src="video/hero_bg.mp4" type="video/mp4">
+  			<source src="video/hero-bg.mp4" type="video/mp4">
   			</video>
-        <div class="hero_text_section">sustainable gardening for a sustainable world.</div>
+        <div class="hero_text_section">sustainable gardening, for a sustainable world.</div>
       </section>
       <!-- End: Section 1 -->
 
@@ -469,7 +518,7 @@
       <!-- End: Section 2 -->
 
       <!-- Spacer -->
-      <section id="spacer">
+      <section class="spacer one">
         <div class="spacer_text_section">
           natural fertilizer for quality gardening
         </div>
@@ -482,6 +531,40 @@
         </div>
       </section>
       <!-- End: Section 3 -->
+
+      <!-- Spacer -->
+      <section class="spacer two">
+        <div class="spacer_text_section">
+          fertilizer for a cleaner and greener world
+        </div>
+      </section>
+
+      <section id="footer">
+        <div class="row">
+          <div class="one-half column info">
+            <div class="one-half column">
+              <div class="footer_address">
+                <h1>info about us</h1>
+                <p>Earnest Earth Agriculture</p>
+                <p>4655 Highway 81 Lynn Center, IL 61262<p>
+                <p>217-766-4401</p>
+              </div>
+            </div>
+            <div class="one-half column">
+              <div class="footer_address">
+                <h1>info about our soil</h1>
+                <p>Earnest Earth Agriculture</p>
+                <p>4655 Highway 81 Lynn Center, IL 61262<p>
+                <p>217-766-4401</p>
+              </div>
+            </div>
+          </div>
+          <div class="one-half column logo">
+            <div class="logo_footer">
+            </div>
+          </div>
+        </div>
+      </div>
 
   </div>
 
