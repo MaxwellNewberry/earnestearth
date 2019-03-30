@@ -5,9 +5,12 @@
         // Get the form fields and remove whitespace.
         $name = strip_tags(trim($_POST["name"]));
 				$name = str_replace(array("\r","\n"),array(" "," "),$name);
+        $phone = trim($_POST['phone']);
+        $linkedin = trim($_POST['linkedin']);
         $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
         $type = trim($_POST['type']);
-        $message = trim($_POST["message"]);
+        $message = trim($_POST["why"]);
+        $how = trim($_POST['how']);
 
         // Check that data was sent to the mailer.
         if ( empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -26,8 +29,11 @@
         // Build the email content.
         $email_content = "Name: $name\n";
         $email_content .= "Email: $email\n";
-        $email_content .= "Type: $type\n\n";
-        $email_content .= "Message:\n$message\n";
+        $email_content .= "Phone: $phone\n";
+        $email_content .= "LinkedIn: $linkedin\n";
+        $email_content .= "Position Type: $type\n\n";
+        $email_content .= "Why do you think you would make a great addition to our team:\n$message\n\n";
+        $email_content .="How do you hear about us:\n $how\n";
 
         // Build the email headers.
         $email_headers = "From: $name <$email>";

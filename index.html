@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/skeleton.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-
+    <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/8ff0388f1268c21b37815f4f7/2c33c6a1c6e4b89780fde2dd8.js");</script>
   </head>
   <body  id="skrollr-body">
 
@@ -102,33 +102,19 @@
       <!-- Section 4: Contact Form -->
       <section id="contact_form">
         <div class="row">
-          <div class="heading">contact us</div>
+          <div class="heading">newsletter</div>
           <div id="form-messages"></div>
           <div class="row contact_form">
             <div class="eight columns">
-              <form action="form_process.php" method="post" id="contact_form_id">
+              <form action="https://earnest-earth.us20.list-manage.com/subscribe/post?u=8ff0388f1268c21b37815f4f7&amp;id=e02fff1e7b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                 <div class="twelve columns contact_form_section">
-                  <div class="one-half column"><input name="name" placeholder="Your name" type="text" id="name"></div>
-                  <div class="one-half column"><input name="email" placeholder="Your email" type="text" id="email"></div>
+                  <div class="four columns"><input name="FNAME" placeholder="Your first name" type="text" id="mce-FNAME"></div>
+                  <div class="four columns"><input name="LNAME" placeholder="Your last name" type="text" id="mce-LNAME"></div>
+                  <div class="four columns"><input name="EMAIL" placeholder="Your email" type="text" id="mce-EMAIL"></div>
                 </div>
                 <div class="twelve columns contact_form_section">
                   <div class="twelve columns">
-                    <select name="type" id="type">
-                      <option value="default">Please select a reason</option>
-                      <option value="message">Message</option>
-                      <option value="newsletter">Newsletter</option>
-                      <option value="stock">Stock Reminder</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="twelve columns contact_form_section">
-                  <div class="twelve columns">
-                    <textarea name="message" id="message" placeholder="Enter your message here."></textarea>
-                  </div>
-                </div>
-                <div class="twelve columns contact_form_section">
-                  <div class="twelve columns">
-                    <input type="submit" name="submit" id="submit" />
+                    <input value="Subscribe" type="submit" name="subscribe" id="mc-embedded-subscribe" />
                   </div>
                 </div>
               </form>
@@ -252,51 +238,6 @@ $(window).bind("load", function() {
      }
    });
  });
-
- $(function() {
-    // Get the form.
-    var form = $('#contact_form_id');
-
-    // Get the messages div.
-    var formMessages = $('#form-messages');
-
-    $(form).submit(function(event) {
-    // Stop the browser from submitting the form.
-    event.preventDefault();
-
-    var formData = $(form).serialize();
-
-    $.ajax({
-    type: 'POST',
-    url: $(form).attr('action'),
-    data: formData
-    }).done(function(response) {
-    // Make sure that the formMessages div has the 'success' class.
-    $(formMessages).removeClass('error');
-    $(formMessages).addClass('success');
-
-    // Set the message text.
-    $(formMessages).text(response);
-
-    // Clear the form.
-    $('#name').val('');
-    $('#email').val('');
-    $('#message').val('');
-    }).fail(function(data) {
-    // Make sure that the formMessages div has the 'error' class.
-    $(formMessages).removeClass('success');
-    $(formMessages).addClass('error');
-
-    // Set the message text.
-    if (data.responseText !== '') {
-        $(formMessages).text(data.responseText);
-    } else {
-        $(formMessages).text('Oops! An error occured and your message could not be sent.');
-    }
-    });
-
-    });
-});
   </script>
   </body>
 </html>

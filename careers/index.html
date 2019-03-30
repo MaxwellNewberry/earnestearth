@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" / >
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/skeleton.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  </head>
+  <body  id="skrollr-body">
+
+    <!-- Pre-loader -->
+    <div class="preloader" id="pre-loader"></div>
+
+    <div class="wrapper">
+
+      <!-- Navigation Bar -->
+      <div id="nav">
+        <div class="row">
+          <div class="five columns">
+            <div class="brand"><div class="brand_image_section"><img src="../css/logo.jpg" /></div></div>
+          </div>
+          <div class="seven columns">
+            <ul class="nav-list">
+              <li><a id="top-lnk" data-menu-top="0" id="home" href="../index.html#top">home</a></li>
+              <li><a id="about-link" data-menu-top="165" href="../index.html#about">about us</a></li>
+              <li><a id="products-link" data-menu-top="540" href="../index.html#products">our products</a></li>
+              <li><a href="">blog</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- End: Navigation Bar -->
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="mobile-menu">
+        <div id="mobile_symbol" class="mobile_symbol"><i class="fas fa-bars"></i></div>
+
+        <!-- Mobile Menu List -->
+        <ul id="mobile_menu_list" class="mobile_menu_list">
+          <li><a class="unselect" id="top-link" data-menu-top="0" href="../index.html#top">home</a></li>
+          <li><a class="unselect" id="about-link" data-menu-top="175" href="../index.html#about">about us</a></li>
+          <li><a class="unselect" id="products-link" data-menu-top="685" href="../index.html#products">our products</a></li>
+          <li><a class="unselect" href="">blog</a></li>
+        </ul>
+        <!-- End: Mobile Menu List -->
+      </div>
+      <!-- End: Mobile Menu -->
+
+      <!-- Section 1: Investor Form -->
+      <section id="investor_form">
+        <div class="row">
+          <div class="heading">Let's Fight Global Warming Together.</div>
+          <div class="heading-content">
+            <p>Looking to joining the Earnest Earth team?</p>
+            <p>We appreciate your interest in Earnest Earth Agriculture.</p>
+            <p>At Earnest Earth we want to make the world a CLEANER and GREENER place.</p>
+            <p>We are looking for people who can align with our vision and values.</p>
+          </div>
+          <div id="form-messages"></div>
+          <div class="row contact_form">
+            <div class="eight columns">
+              <form action="form_process.php" method="post" id="contact_form_id">
+                <div class="twelve columns contact_form_section">
+                  <div class="four columns"><input name="name" placeholder="Your name" type="text" id="name"></div>
+                  <div class="four columns"><input name="email" placeholder="Your email" type="text" id="email"></div>
+                  <div class="four columns"><input name="phone" placeholder="Your phone number" type="text" id="phone"></div>
+                </div>
+                <div clas="twelve columns contact_form_section">
+                  <div class="twelve columns"><input name="linkedin" placeholder="LinkedIn Profile Link" type="text" id="linkedin" />
+                </div>
+                <div class="twelve columns contact_form_section">
+                  <div class="twelve columns">
+                    <select name="type" id="type">
+                      <option value="default">Please select a position you're interested in</option>
+                      <option value="product">Product Marketer (Internship)</option>
+                      <option value="content">Content Creator (Internship)</option>
+                      <option value="web">Web/App Developer (Internship)</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="twelve columns contact_form_section">
+                  <div class="twelve columns">
+                    <textarea name="why" id="message" placeholder="Why do you think you would make a great addition to our team?"></textarea>
+                  </div>
+                </div>
+                <div clas="twelve columns contact_form_section">
+                  <div class="twelve columns"><input name="how" placeholder="How did you hear about us?" type="text" id="how" />
+                </div>
+                <div class="twelve columns contact_form_section">
+                  <div class="twelve columns">
+                    <input type="submit" name="submit" id="submit" />
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End: Section 1 -->
+
+      <section id="footer">
+        <div class="row">
+          <div class="one-half column info">
+              <div class="one-half column">
+                <div class="footer_address">
+                  <h1>info about us</h1>
+                  <p>Earnest Earth Agriculture</p>
+                  <p>4655 Highway 81 Lynn Center, IL 61262<p>
+                  <p>217-766-4401</p>
+                </div>
+              </div>
+              <div class="one-half column">
+                <div class="social_media">
+                  <h1>social media</h1>
+                  <p><a href="https://www.facebook.com/earnestearthag"><i class="fab fa-facebook-f"></i></a><a href="https://twitter.com/earnestearth"><i class="fab fa-twitter"></i></a><a href="https://www.instagram.com/earnestearth/"><i class="fab fa-instagram"></i></a><a href="https://www.linkedin.com/company/earnestearth"><i class="fab fa-linkedin-in"></i></a></p>
+                </div>
+              </div>
+            </div>
+            <div class="one-half column logo">
+              <div class="logo_footer">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="../skollr.js"></script>
+        <script src="../skrollr.menu.js"></script>
+        <script>
+          var s = skrollr.init({            mobileCheck: function() {
+                      //hack - forces mobile version to be off
+                      return false;
+                  }});
+          skrollr.menu.init(s, {animate: true,
+
+      	//The easing function to use.
+      	easing: 'sqrt',
+
+      	//Multiply your data-[offset] values so they match those set in skrollr.init
+      	scale: 2,
+
+      	//How long the animation should take in ms.
+      	duration: function(currentTop, targetTop) {
+      		//By default, the duration is hardcoded at 500ms.
+      		return 200;
+
+      		//But you could calculate a value based on the current scroll position (`currentTop`) and the target scroll position (`targetTop`).
+      		//return Math.abs(currentTop - targetTop) * 10;
+      	},
+        mobileCheck: function() {
+                    //hack - forces mobile version to be off
+                    return false;
+                }});
+        </script>
+        <script>
+
+      $(window).bind("load", function() {
+          $('body').css('overflow','hidden');
+          $('.preloader').fadeOut();
+         $('.wrapper').fadeIn();
+         $('body').css('overflow','auto');
+         $("#mobile_symbol").click(function() {
+           if($("#mobile_menu_list").is(":visible"))
+           {
+             $("#mobile_menu_list").hide(300);
+           }
+           else {
+             $("#mobile_menu_list").show(300);
+           }
+         });
+       });
+
+       $(function() {
+          // Get the form.
+          var form = $('#contact_form_id');
+
+          // Get the messages div.
+          var formMessages = $('#form-messages');
+
+          $(form).submit(function(event) {
+          // Stop the browser from submitting the form.
+          event.preventDefault();
+
+          var formData = $(form).serialize();
+
+          $.ajax({
+          type: 'POST',
+          url: $(form).attr('action'),
+          data: formData
+          }).done(function(response) {
+          // Make sure that the formMessages div has the 'success' class.
+          $(formMessages).removeClass('error');
+          $(formMessages).addClass('success');
+
+          // Set the message text.
+          $(formMessages).text(response);
+
+          // Clear the form.
+          $('#name').val('');
+          $('#email').val('');
+          $('#phone').val('');
+          $('#why').val('');
+          $('#linkedin').val('');
+          $('#how').val('');
+          }).fail(function(data) {
+          // Make sure that the formMessages div has the 'error' class.
+          $(formMessages).removeClass('success');
+          $(formMessages).addClass('error');
+
+          // Set the message text.
+          if (data.responseText !== '') {
+              $(formMessages).text(data.responseText);
+          } else {
+              $(formMessages).text('Oops! An error occured and your message could not be sent.');
+          }
+          });
+
+          });
+      });
+        </script>
+  </body>
+</html>

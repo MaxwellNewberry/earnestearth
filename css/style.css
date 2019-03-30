@@ -442,6 +442,25 @@ section {
 	margin: 0 10px;
 }
 
+#investor_form, #careers_form {
+	padding-top: 90px;
+}
+
+#investor_form .heading {
+	width: 80%;
+}
+
+#investor_form .heading-content {
+	margin: 30px 0;
+}
+
+#investor_form .heading-content p {
+	display: block;
+	margin: 10px auto;
+	text-align: left;
+	width: 65%;
+}
+
 @media only screen and (max-width: 1000px) {
 	#hero div.hero_text_section,
 	#spacer div.spacer_text_section {
